@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hard Mode Studio</title>
+    <title>SignLoop Preview | Design Experiments</title>
     <meta
       name="description"
-      content="A brutalist, high-energy digital studio concept page with bold visuals and motion."
+      content="SignLoop frontend preview in the design-experiments visual language. No auth, no backend."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,127 +25,162 @@
     <header class="topbar">
       <div class="logo">
         <span class="logo-mark">//</span>
-        <span>HARD MODE</span>
+        <span>SIGNLOOP PREVIEW</span>
       </div>
       <nav class="topnav">
-        <a href="#work">Work</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
+        <a href="#workspace" data-open-panel="contracts">Contracts</a>
+        <a href="#workspace" data-open-panel="projects">Projects</a>
+        <a href="#signals">Signals</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy reveal">
-          <p class="kicker">Design / Build / Dominate</p>
+          <p class="kicker">AI Contract Intelligence</p>
           <h1>
-            The internet
-            <span class="glitch" data-text="should hit harder.">should hit harder.</span>
+            Understand contracts
+            <span class="glitch" data-text="in seconds.">in seconds.</span>
           </h1>
           <p class="lede">
-            We build launch pages, product sites, and brand worlds that look dangerous,
-            fast, and impossible to ignore.
+            SignLoop, remade in this repo's design language. This is a frontend-only preview with
+            no login and no backend, but the core product menus and navigation flow are wired.
           </p>
           <div class="hero-actions">
-            <a href="#work" class="btn btn-primary">See The Damage</a>
-            <a href="#process" class="btn btn-ghost">How We Work</a>
+            <a href="#workspace" class="btn btn-primary" data-open-panel="contracts">Open Contracts</a>
+            <a href="#workspace" class="btn btn-ghost" data-open-panel="projects">Open Projects</a>
           </div>
         </div>
 
         <aside class="hero-stack reveal">
           <article class="stack-card tilt-card">
-            <p class="stack-label">Live Systems</p>
-            <h3>27 active drops</h3>
-            <p>Shipping weekly with performance budgets and brutal QA.</p>
+            <p class="stack-label">Primary Flow</p>
+            <h3>Contracts + Projects</h3>
+            <p>Mirrors SignLoop's dashboard tabs and list/detail workflow.</p>
           </article>
           <article class="stack-card tilt-card">
-            <p class="stack-label">Velocity</p>
-            <h3>2.1s LCP target</h3>
-            <p>Visual intensity without sacrificing load speed.</p>
+            <p class="stack-label">Analysis Layer</p>
+            <h3>Risk + Red Flags</h3>
+            <p>Shows risk badges, key findings, dates, and next actions.</p>
           </article>
           <article class="stack-card tilt-card">
-            <p class="stack-label">Mood</p>
-            <h3>Zero boring pixels</h3>
-            <p>Every section earns attention or gets deleted.</p>
+            <p class="stack-label">Preview Mode</p>
+            <h3>No auth, no backend</h3>
+            <p>UI behavior only, with local mock data for realistic interaction.</p>
           </article>
         </aside>
       </section>
 
-      <section class="ticker-wrap" aria-label="Highlights">
+      <section class="ticker-wrap" aria-label="SignLoop capabilities">
         <div class="ticker">
-          <span>BRUTALIST ENERGY</span>
-          <span>HIGH-CONTRAST TYPOGRAPHY</span>
-          <span>MEANINGFUL MOTION</span>
-          <span>PERFORMANCE FIRST</span>
-          <span>MOBILE READY</span>
-          <span>BRUTALIST ENERGY</span>
-          <span>HIGH-CONTRAST TYPOGRAPHY</span>
-          <span>MEANINGFUL MOTION</span>
-          <span>PERFORMANCE FIRST</span>
-          <span>MOBILE READY</span>
+          <span>INSTANT SUMMARIES</span>
+          <span>RISK DETECTION</span>
+          <span>KEY DATES</span>
+          <span>NEXT ACTIONS</span>
+          <span>CONTEXT-AWARE ANALYSIS</span>
+          <span>CONTRACT HISTORY</span>
+          <span>INSTANT SUMMARIES</span>
+          <span>RISK DETECTION</span>
+          <span>KEY DATES</span>
+          <span>NEXT ACTIONS</span>
+          <span>CONTEXT-AWARE ANALYSIS</span>
+          <span>CONTRACT HISTORY</span>
         </div>
       </section>
 
-      <section id="work" class="work">
+      <section id="workspace" class="workspace">
         <div class="section-head reveal">
-          <p class="kicker">Selected Weapons</p>
-          <h2>Concept builds that punch above their weight.</h2>
+          <p class="kicker">Workspace</p>
+          <h2>Dashboard menus wired: contracts and projects.</h2>
         </div>
-        <div class="work-grid">
-          <article class="work-card reveal tilt-card">
-            <p class="work-tag">01 / Product Launch</p>
-            <h3>Riot Engine</h3>
-            <p>Launch system for an AI hardware startup with interactive data walls.</p>
-          </article>
-          <article class="work-card reveal tilt-card">
-            <p class="work-tag">02 / Brand Site</p>
-            <h3>Steelwave</h3>
-            <p>Editorial commerce experience built on an asymmetric grid and kinetic text.</p>
-          </article>
-          <article class="work-card reveal tilt-card">
-            <p class="work-tag">03 / Campaign</p>
-            <h3>Afterburn</h3>
-            <p>High-pressure campaign page with modular scenes and rapid A/B iteration.</p>
-          </article>
+
+        <div class="app-shell reveal">
+          <aside class="menu-panel">
+            <p class="menu-label">Main Menu</p>
+            <button class="menu-btn active" data-panel-target="contracts">Contracts</button>
+            <button class="menu-btn" data-panel-target="projects">Projects</button>
+            <p class="menu-note">
+              Preview only. Upload, analysis, and delete actions are visual stubs.
+            </p>
+          </aside>
+
+          <div class="workspace-main">
+            <div class="workspace-top">
+              <div class="tab-switch">
+                <button class="tab-btn active" data-panel-target="contracts">Contracts</button>
+                <button class="tab-btn" data-panel-target="projects">Projects</button>
+              </div>
+              <div class="workspace-actions">
+                <button class="btn btn-primary btn-sm" type="button">New Contract</button>
+                <button class="btn btn-ghost btn-sm" type="button">New Project</button>
+              </div>
+            </div>
+
+            <section class="data-panel active" data-panel="contracts">
+              <div class="panel-grid">
+                <div class="list-pane">
+                  <p class="panel-kicker">Standalone Contracts</p>
+                  <h3 class="panel-title">Choose a contract to inspect analysis output.</h3>
+                  <div id="contractsList" class="entity-list"></div>
+                </div>
+                <aside class="detail-pane">
+                  <div id="contractDetail"></div>
+                </aside>
+              </div>
+            </section>
+
+            <section class="data-panel" data-panel="projects">
+              <div class="panel-grid">
+                <div class="list-pane">
+                  <p class="panel-kicker">Projects</p>
+                  <h3 class="panel-title">Context-driven review groups and document sets.</h3>
+                  <div id="projectsList" class="entity-list"></div>
+                </div>
+                <aside class="detail-pane">
+                  <div id="projectDetail"></div>
+                </aside>
+              </div>
+            </section>
+          </div>
         </div>
       </section>
 
-      <section id="process" class="process">
+      <section id="signals" class="signals">
         <div class="section-head reveal">
-          <p class="kicker">Battle Plan</p>
-          <h2>Simple process. Ruthless execution.</h2>
+          <p class="kicker">Signal Blocks</p>
+          <h2>The analysis primitives pulled from SignLoop flows.</h2>
         </div>
-        <div class="steps">
-          <article class="step reveal">
-            <span class="step-index">01</span>
-            <h3>Direction Lock</h3>
-            <p>Fast style exploration to pin visual tone, typography, and interaction language.</p>
+        <div class="signal-grid">
+          <article class="signal-card reveal tilt-card">
+            <p class="work-tag">Summary</p>
+            <h3>What it is + payments + term</h3>
+            <p>Quick contract brief with renewal and cancellation terms surfaced first.</p>
           </article>
-          <article class="step reveal">
-            <span class="step-index">02</span>
-            <h3>Build Fast</h3>
-            <p>Component-first implementation with clean structure and measurable performance.</p>
+          <article class="signal-card reveal tilt-card">
+            <p class="work-tag">Risk</p>
+            <h3>Red flags with severity</h3>
+            <p>Confidence-backed issue list with where/why indicators and actionability.</p>
           </article>
-          <article class="step reveal">
-            <span class="step-index">03</span>
-            <h3>Cut Hard</h3>
-            <p>Anything that does not create impact, clarity, or conversion gets removed.</p>
+          <article class="signal-card reveal tilt-card">
+            <p class="work-tag">Actions</p>
+            <h3>Questions and email templates</h3>
+            <p>Negotiation prompts and outreach drafts to move review into execution.</p>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="cta reveal">
-        <p class="kicker">Ready To Launch</p>
-        <h2>If your current website feels safe, it is already losing.</h2>
-        <a href="mailto:hello@hardmode.studio" class="btn btn-primary">Start A Project</a>
+      <section class="cta reveal">
+        <p class="kicker">Scope</p>
+        <h2>Frontend concept only. Interactions are live, data is mocked.</h2>
+        <p class="cta-meta">Sign-in, uploads, analysis jobs, and persistence are intentionally disabled.</p>
       </section>
     </main>
 
     <footer class="footer">
-      <p>Hard Mode Studio / 2026</p>
-      <p>Built for impact, tuned for speed.</p>
+      <p>SignLoop Preview / 2026</p>
+      <p>Built for impact, tuned for product flow.</p>
     </footer>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=signloop-ui"></script>
   </body>
 </html>
