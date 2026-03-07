@@ -140,73 +140,74 @@ export function Features() {
           </div>
 
           <BlurFade delay={0.2} inView>
-            <MagicCard
-              id="privacy"
-              gradientFrom="#14b8a6"
-              gradientTo="#f59e0b"
-              className="h-full rounded-3xl border border-border p-8"
-            >
-              <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <Shield className="h-4 w-4 text-teal-600" />
-                Trust model
-              </div>
-              <h3 className="mt-4 font-display text-3xl font-semibold tracking-tight">
-                Built for client billing, not surveillance theater
-              </h3>
-              <p className="mt-4 text-sm leading-6 text-muted-foreground">
-                The strongest part of the demo should answer the obvious trust
-                questions up front: what gets tracked, what stays reviewable,
-                and why the output is something you would actually send to a
-                client.
-              </p>
-
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {trustHighlights.map((highlight) => (
-                  <div
-                    key={highlight.title}
-                    className="rounded-2xl border border-border bg-background/75 p-4"
-                  >
-                    <p className="font-medium">{highlight.title}</p>
-                    <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                      {highlight.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 rounded-3xl border border-border bg-background/85 p-5">
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                      Typical week
-                    </p>
-                    <p className="mt-1 font-display text-xl font-semibold">
-                      18h captured, 15.5h billable, 45m left for review
-                    </p>
-                  </div>
-                  <Badge
-                    variant="secondary"
-                    className="border border-border bg-muted/60 px-3 py-1 text-xs"
-                  >
-                    Export-ready
-                  </Badge>
+            <div id="privacy">
+              <MagicCard
+                gradientFrom="#14b8a6"
+                gradientTo="#f59e0b"
+                className="h-full rounded-3xl border border-border p-8"
+              >
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <Shield className="h-4 w-4 text-teal-600" />
+                  Trust model
                 </div>
-                <div className="mt-5 grid gap-3">
-                  {[
-                    "Apps, files, and domains reveal where the work happened.",
-                    "Review queue isolates uncertainty before it leaks into billing.",
-                    "Final output reads like project proof, not an activity dump.",
-                  ].map((item) => (
+                <h3 className="mt-4 font-display text-3xl font-semibold tracking-tight">
+                  Built for client billing, not surveillance theater
+                </h3>
+                <p className="mt-4 text-sm leading-6 text-muted-foreground">
+                  The strongest part of the demo should answer the obvious trust
+                  questions up front: what gets tracked, what stays reviewable,
+                  and why the output is something you would actually send to a
+                  client.
+                </p>
+
+                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                  {trustHighlights.map((highlight) => (
                     <div
-                      key={item}
-                      className="rounded-2xl bg-muted/50 px-4 py-3 text-sm text-muted-foreground"
+                      key={highlight.title}
+                      className="rounded-2xl border border-border bg-background/75 p-4"
                     >
-                      {item}
+                      <p className="font-medium">{highlight.title}</p>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                        {highlight.description}
+                      </p>
                     </div>
                   ))}
                 </div>
-              </div>
-            </MagicCard>
+
+                <div className="mt-8 rounded-3xl border border-border bg-background/85 p-5">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                        Typical week
+                      </p>
+                      <p className="mt-1 font-display text-xl font-semibold">
+                        18h captured, 15.5h billable, 45m left for review
+                      </p>
+                    </div>
+                    <Badge
+                      variant="secondary"
+                      className="border border-border bg-muted/60 px-3 py-1 text-xs"
+                    >
+                      Export-ready
+                    </Badge>
+                  </div>
+                  <div className="mt-5 grid gap-3">
+                    {[
+                      "Apps, files, and domains reveal where the work happened.",
+                      "Review queue isolates uncertainty before it leaks into billing.",
+                      "Final output reads like project proof, not an activity dump.",
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className="rounded-2xl bg-muted/50 px-4 py-3 text-sm text-muted-foreground"
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </MagicCard>
+            </div>
           </BlurFade>
         </div>
       </div>
