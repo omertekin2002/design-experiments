@@ -224,6 +224,7 @@ export default function DashboardPage() {
   const handleProjectChange = (blockId: string, value: string) => {
     const nextProject = value ? (value as ProjectName) : null;
     const currentBlock = timeBlocks.find((block) => block.id === blockId);
+    const nextTone: ActivityEvent["tone"] = nextProject ? "assigned" : "warning";
 
     if (!currentBlock || currentBlock.project === nextProject) {
       return;
@@ -244,7 +245,7 @@ export default function DashboardPage() {
       [
         {
           id: `${blockId}-${Date.now()}`,
-          tone: nextProject ? "assigned" : "warning",
+          tone: nextTone,
           text: `[${timestamp}] ${currentBlock.app} → ${
             nextProject ?? "Returned to unassigned"
           }`,
