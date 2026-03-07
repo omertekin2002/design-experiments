@@ -5,6 +5,11 @@ import { motion } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
+const seededProgress = (seed: number) => {
+  const raw = Math.sin(seed * 12.9898) * 43758.5453
+  return raw - Math.floor(raw)
+}
+
 /**
  *  DotPattern Component Props
  *
@@ -99,11 +104,13 @@ export function DotPattern({
     (_, i) => {
       const col = i % Math.ceil(dimensions.width / width)
       const row = Math.floor(i / Math.ceil(dimensions.width / width))
+      const progress = seededProgress(i + 1)
+      const durationProgress = seededProgress(i + 101)
       return {
         x: col * width + cx + x,
         y: row * height + cy + y,
-        delay: Math.random() * 5,
-        duration: Math.random() * 3 + 2,
+        delay: progress * 5,
+        duration: durationProgress * 3 + 2,
       }
     }
   )

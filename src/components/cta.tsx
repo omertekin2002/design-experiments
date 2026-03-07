@@ -1,10 +1,13 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 
 export function CTA() {
+  const router = useRouter();
+
   return (
     <section className="relative py-24">
       <DotPattern
@@ -32,6 +35,7 @@ export function CTA() {
               background="oklch(0.65 0.15 160)"
               shimmerColor="rgba(255,255,255,0.4)"
               className="px-10 py-4 text-base font-medium"
+              onClick={() => router.push("/dashboard")}
             >
               Start Free Trial
             </ShimmerButton>

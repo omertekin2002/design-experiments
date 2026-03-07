@@ -4,13 +4,10 @@ import { useRef } from "react"
 import {
   AnimatePresence,
   motion,
-  useInView,
+  useReducedMotion,
   type MotionProps,
-  type UseInViewOptions,
   type Variants,
 } from "motion/react"
-
-type MarginType = UseInViewOptions["margin"]
 
 interface BlurFadeProps extends MotionProps {
   children: React.ReactNode
@@ -24,7 +21,7 @@ interface BlurFadeProps extends MotionProps {
   offset?: number
   direction?: "up" | "down" | "left" | "right"
   inView?: boolean
-  inViewMargin?: MarginType
+  inViewMargin?: string
   blur?: string
 }
 
@@ -39,14 +36,15 @@ export function BlurFade({
   delay = 0,
   offset = 6,
   direction = "down",
-  inView = false,
-  inViewMargin = "-50px",
+  inView: _inView = false,
+  inViewMargin: _inViewMargin = "-50px",
   blur = "6px",
   ...props
 }: BlurFadeProps) {
   const ref = useRef(null)
-  const inViewResult = useInView(ref, { once: true, margin: inViewMargin })
-  const isInView = !inView || inViewResult
+  const prefersReducedMotion = useReducedMotion()
+  void _inView
+  void _inViewMargin
   const defaultVariants: Variants = {
     hidden: {
       [direction === "left" || direction === "right" ? "x" : "y"]:
@@ -74,8 +72,8 @@ export function BlurFade({
     <AnimatePresence>
       <motion.div
         ref={ref}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
+        initial={prefersReducedMotion ? "visible" : "hidden"}
+        animate="visible"
         exit="hidden"
         variants={combinedVariants}
         transition={{

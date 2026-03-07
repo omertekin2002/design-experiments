@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Zap } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { DotPattern } from "@/components/ui/dot-pattern";
@@ -9,6 +10,8 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
 
 export function Hero() {
+  const router = useRouter();
+
   return (
     <section className="relative overflow-hidden pt-32 pb-20">
       <DotPattern
@@ -50,6 +53,7 @@ export function Hero() {
                   background="oklch(0.65 0.15 160)"
                   shimmerColor="rgba(255,255,255,0.4)"
                   className="px-8 py-3 text-base font-medium"
+                  onClick={() => router.push("/dashboard")}
                 >
                   Start Free Trial
                 </ShimmerButton>
